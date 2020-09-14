@@ -5,6 +5,10 @@ def turn(board)
   input_to_index(user_input)
   index = user_input.to_i - 1
   valid_move?(board, index)
+  if valid_move?(board, index) == false
+    puts "Invalid move, Please enter 1-9:"
+    user_input = gets.strip.to_i
+  end
 end
 
 def display_board(board)
