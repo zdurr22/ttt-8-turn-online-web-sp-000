@@ -3,6 +3,7 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip.to_i
   input_to_index(user_input)
+  index = user_input.to_i - 1
   valid_move?(board, index)
 end
 
@@ -18,7 +19,7 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-index = user_input.to_i - 1
+
 
 def move(array, index, value="X")
   array[index] = value
