@@ -5,7 +5,7 @@ def turn(board)
   input_to_index(user_input)
   index = user_input.to_i - 1
   if valid_move?(board, index) == true
-    move(array, index, value="X")
+    move(board, index, value="X")
     display_board(board)
   else
     turn(board)
