@@ -1,4 +1,10 @@
 board = [" "," "," "," "," "," "," "," "," "]
+def turn(board)
+  puts "Please enter 1-9:"
+  user_input = gets.strip.to_i
+  input_to_index(user_input)
+  valid_move?(board, index)
+end
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -36,11 +42,4 @@ def position_taken?(board, index)
   elsif board[index] == "X" || board[index] == "O"
     true
   end
-end
-
-def turn(board)
-  puts "Please enter 1-9:"
-  user_input = gets.strip.to_i
-  input_to_index(user_input)
-  valid_move?(board, index)
 end
