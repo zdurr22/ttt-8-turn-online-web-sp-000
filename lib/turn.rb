@@ -9,6 +9,7 @@ def turn(board)
     display_board(board)
   else
     turn(board)
+  end
 end
 
 def display_board(board)
