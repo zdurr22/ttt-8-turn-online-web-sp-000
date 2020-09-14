@@ -36,3 +36,4 @@ def position_taken?(board, index)
     true
   end
 end
+display_board(board)
