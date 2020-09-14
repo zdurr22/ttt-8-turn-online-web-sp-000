@@ -15,6 +15,15 @@ def move(array, index, value="X")
   array[index] = value
 end
 
+def valid_move?(board, index)
+  if position_taken?(board, index) == true
+    false
+  elsif index.between?(0, 8) == true
+    true
+  elsif index.between?(0, 8) == false
+    false
+  end
+end
 def position_taken?(board, index)
   if board[0] == " "
     false
