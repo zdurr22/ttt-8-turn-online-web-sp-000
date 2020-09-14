@@ -4,8 +4,8 @@ require_relative '../lib/turn.rb'
 # Code your CLI Here
 board = [" "," "," "," "," "," "," "," "," "]
 puts "Welcome to Tic Tac Toe!"
-puts display_board(board)
-print "Please enter 1-9:"
+display_board(board)
+turn(board)
 input = gets.strip.to_i
 input_to_index(input)
 move(board, 0, "X")
