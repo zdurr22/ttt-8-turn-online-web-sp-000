@@ -4,7 +4,11 @@ def turn(board)
   user_input = gets.strip.to_i
   input_to_index(user_input)
   index = user_input.to_i - 1
-  valid_move?(board, index)
+  if valid_move?(board, index) == true
+    move(array, index, value="X")
+    display_board(board)
+  else
+    turn(board)
 end
 
 def display_board(board)
