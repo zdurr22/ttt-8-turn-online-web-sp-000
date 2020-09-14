@@ -7,7 +7,7 @@ def turn(board)
   valid_move?(board, index)
   if valid_move?(board, index) == false
     puts "Invalid move, Please enter 1-9:"
-    user_input = gets.strip.to_i
+    gets.strip.to_i
   end
 end
 
